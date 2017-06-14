@@ -3,4 +3,4 @@
 - Jogo Pedra Papel Tesoura
 
 
-![CC - UFFS](http://i.imgur.com/peOLWUp.png)
+![CC - UFFS](http://i.imgur.com/lLClOaR.png)
