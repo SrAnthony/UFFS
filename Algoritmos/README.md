@@ -13,6 +13,10 @@
 - Exibir notas parciais
 - Exibir notas finais
 
+#### Compilação
+- Usando terminal linux, use "gcc Arquivo.c" (flag -Wall pode ser usada para verificar por erros)
+- Para executar, use "./a.out"
+
 
 ![Alunos cadastrados](http://i.imgur.com/1pHV84E.png)
 ![Turmas cadastradas](http://i.imgur.com/dm583RL.png)
