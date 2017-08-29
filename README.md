@@ -2,7 +2,7 @@
 Universidade Federal da Fronteira Sul
 
 ### CA - Centro Acadêmico de CC
-- Desenvolvimento do website de inscrição para a semana acadêmica: http://uffs.tk
+- Desenvolvimento do website de inscrição para a semana acadêmica: https://uffs.cafe
 ### Algoritmos [1]
 - Programação em C: Desenvolver um sistema para controle de turmas, alunos e notas.
 ### Circuitos Digitais [1]
