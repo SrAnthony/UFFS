@@ -1,3 +1,6 @@
+//Trabalho 1 de Sistemas Digitais
+//Feito por Anthony Nadaletti - 2/2017
+
 module piscaleds1(
 	input CLOCK_50, 
 	input [3:0] KEY, 
