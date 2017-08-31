@@ -42,4 +42,7 @@ int main(){
 	}
 	else
 		printf("Erro na alocação\n");
+
+	free();
+	return 0;
 }
