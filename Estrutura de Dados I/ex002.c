@@ -19,7 +19,7 @@ int main(){
 	printf("Digite o tamanho do vetor:\n");
 	scanf("%d", &j);
 
-	P = (struct estudante *)malloc(j * sizeof(estudante));
+	P = (estudante *)malloc(j * sizeof(estudante));
 
 	if(P){
 		for(i=0; i < j; i++){
@@ -32,8 +32,8 @@ int main(){
 			printf("Digite o valor da matrícula:\n");
 			scanf("%d", &(P + i)->matricula);
 		}
+		system("clear");
 		for(i=0; i < j; i++){
-			system("clear");
 			printf("\n*** Posição %d ***\n", i);
 			printf("Nome: %s", (P + i) -> nome);
 			printf("Endereço: %s", (P + i) -> endereco);
