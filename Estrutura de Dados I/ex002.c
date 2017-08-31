@@ -43,6 +43,6 @@ int main(){
 	else
 		printf("Erro na alocação\n");
 
-	free();
+	free(P);
 	return 0;
 }

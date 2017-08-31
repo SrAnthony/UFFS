@@ -25,7 +25,7 @@ int main(){
 	else
 		printf("Erro na alocação de memória\n");
 
-	free();
+	free(P);
 	return 0;
 
 	
