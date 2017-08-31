@@ -23,8 +23,10 @@ int main(){
 			}else{
 				cont2 += 5;
 				int * P2 = realloc(P, (cont + 5) * sizeof(int));
-				if(P2)
+				if(P2){
 					P = P2;
+					printf("\n--- Realocou ---\n\n");
+				}
 				else{
 					printf("Erro na alocação de memória\nImprimindo o que foi armazenado:\n");
 					break;
