@@ -9,5 +9,9 @@ Universidade Federal da Fronteira Sul
 - Jogo do Pedra Papel Tesoura
 ### Sistemas Digitais [2]
 - Utilização do Verilog
+### Estrutura de dados I [2]
+- Trabalhos sobre ponteiros e métodos de ordenação em C
+### Programação I [2]
+- Introdução à linguagem Java
 
 ![CC - UFFS](http://i.imgur.com/lLClOaR.png)
