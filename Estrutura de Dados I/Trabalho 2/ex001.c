@@ -65,7 +65,7 @@ void pop(pilha* duracell){
 		printf("Confirmar exclusão do número %s%d%s? (\e[32mS%s/\e[31mN%s)\n    - ", bs, duracell->info[duracell->topo], bf, bf, bf);
 		char sn;
 		getchar(); scanf("%c", &sn);
-		if(sn == 's')
+		if(sn == 's' || sn == 'S')
 			duracell->info[duracell->topo--] = 0;
 	}
 }
