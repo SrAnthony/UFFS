@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdio_ext.h>
-#define MAX 9
+#define MAX 5
 #define bs "\e[1m"//Bold
 #define bf "\e[0m"//Reset
 
