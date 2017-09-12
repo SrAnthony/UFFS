@@ -53,7 +53,7 @@ void push(pilha* duracell){
 	view(duracell, -1);
 	if(verify(duracell)){
 		printf("Digite o valor que deseja adicionar (int): \n    - ");
-		scanf("%d", &duracell->info[++duracell->topo]);
+		scanf("%d", duracell->info+(++duracell->topo));
 	}
 }
 
@@ -62,11 +62,13 @@ void pop(pilha* duracell){
 	view(duracell, -1);
 	if(verify(duracell) != 2){
 		view(duracell, duracell->topo);
-		printf("Confirmar exclusão do número %s%d%s? (\e[32mS%s/\e[31mN%s)\n    - ", bs, duracell->info[duracell->topo], bf, bf, bf);
+		printf("Confirmar exclusão do número %s%d%s? (\e[32mS%s/\e[31mN%s)\n    - ", bs, *duracell->info+duracell->topo, bf, bf, bf);
 		char sn;
 		getchar(); scanf("%c", &sn);
-		if(sn == 's' || sn == 'S')
-			duracell->info[duracell->topo--] = 0;
+		if(sn == 's' || sn == 'S'){
+			*(duracell->info+duracell->topo) = 0;
+			duracell->topo--;
+		}
 	}
 }
 
@@ -90,4 +92,5 @@ int main(){
 		}
 
 	}while(op != 0);
+	free(duracell);
 }
