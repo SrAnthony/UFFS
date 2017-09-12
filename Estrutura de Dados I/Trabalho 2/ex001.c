@@ -30,9 +30,9 @@ void view(pilha* duracell, int del){
 	printf("\t    ____________\n\t    | -------- |\n");
 	for(int i=MAX-1; i >= 0; i--){
 		if(del == i)
-			printf("\t  %d.|   \e[31m%s%04d%s   |\n", i+1, bs, duracell->info[i], bf);
+			printf("\t  %d.|   \e[31m%s%04d%s   |\n", i+1, bs, *(duracell->info+i), bf);
 		else
-			printf("\t  %d.|   %s%04d%s   |\n", i+1, bs, duracell->info[i], bf);
+			printf("\t  %d.|   %s%04d%s   |\n", i+1, bs, *(duracell->info+i), bf);
 	}
 	printf("\t    /----------\\ \n");
 	printf("\n\t   --------------\n");
