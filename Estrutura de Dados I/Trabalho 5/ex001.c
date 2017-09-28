@@ -78,20 +78,18 @@ void del(tp_lista *lista){
 				temp = lista->first;//Guardar o endereço de first para dar free depois
 				lista->first = (lista->first)->next;
 				(lista->first)->prev = NULL;
-				free(temp);
 			}
 			else if(loop == lista->last){//Precisa reaponterar o last
 				temp = lista->last;
 				lista->last = (lista->last)->prev;
 				(lista->last)->next = NULL;
-				free(temp);
 			}
 			else{//Precisa reaponterar o nodo com prev e next
 				temp = loop;
 				(loop->prev)->next = loop->next;
 				(loop->next)->prev = loop->prev;
-				free(temp);
 			}
+			free(temp);
 			(lista->nItens)--;
 		}
 	}
@@ -102,20 +100,18 @@ void delAll(tp_lista *lista){
 	lista->nItens = 0;
 }
 void view(tp_lista *lista){
-	int qnt = 0;
 	system("clear");
 	for(tp_nodo *loop = lista->last; loop != NULL; loop = loop->prev){
 		printf("\t   --------------\n\t   .| %s%s%s\n", bs, loop->produto.nome, bf);
 		printf("\t   .| - Código: %d\n", loop->produto.codigo);
 		printf("\t   .| - Preço: R$ %.2f\n", loop->produto.preco);
-		qnt++;
 	}
-	if(qnt){
+	if(lista->nItens){
 		printf("\t   --------------\n\t    %s1.%s Adicionar\n", bs, bf);// *** ADD
 		printf("\t    %s2.%s Remover\n", bs, bf);// *** DEL
-		printf("\t    %s3.%s Remover tudo (%d)\n", bs, bf, qnt);// *** DELALL
+		printf("\t    %s3.%s Remover tudo (%d)\n", bs, bf, lista->nItens);// *** DELALL
 	}else{
-		printf("\n\t   .| - Pilha vazia\n\n");
+		printf("\n\t   .| - Lista vazia\n\n");
 		printf("\t   --------------\n\t    %s1.%s Adicionar\n", bs, bf);// *** ADD
 		printf("\t    %s2.%s \e[9mRemover%s\n", bs, bf, bf);// *** DEL
 		printf("\t    %s3.%s \e[9mRemover tudo%s\n", bs, bf, bf);// *** DELALL
@@ -125,24 +121,23 @@ void view(tp_lista *lista){
 }
 int main(){
 	int op;
-	tp_lista *lista = (tp_lista*)malloc(sizeof(tp_lista));
-	lista->nItens = 0;
-	lista->last = NULL;
+	tp_lista *lista = (tp_lista*)calloc(1, sizeof(tp_lista));
 	do{
 		view(lista);
 		scanf("%d", &op);
 		switch(op){
-			case 1: 
+			case 1:
 				add(lista);
 				break;
-			case 2: 
-				del(lista);
+			case 2:
+				if(lista->nItens) del(lista);
 				break;
 			case 3:
-				delAll(lista);
+				if(lista->nItens) delAll(lista);
 				break;
 			default: break;
 		}
 	}while(op != 0);
+	delAll(lista);
 	return 0;
 }
