@@ -1,3 +1,9 @@
+/*
+*  ============================
+*  Anthony Nadaletti
+*  https://github.com/SrAnthony
+*  ============================
+*/
 import java.util.*;
 public class Menus{
 	public static Janela menu = new Janela("BodegaSys - Sistema de gestão para bodegas", 92);

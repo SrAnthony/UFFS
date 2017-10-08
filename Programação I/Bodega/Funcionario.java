@@ -1,3 +1,9 @@
+/*
+*  ============================
+*  Anthony Nadaletti
+*  https://github.com/SrAnthony
+*  ============================
+*/
 public class Funcionario{
 	String nome;
 	String cpf;

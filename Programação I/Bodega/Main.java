@@ -1,3 +1,9 @@
+/*
+*  ============================
+*  Anthony Nadaletti
+*  https://github.com/SrAnthony
+*  ============================
+*/
 import java.util.*;
 public class Main{
 	public static void inicio(Empresa empresa){
