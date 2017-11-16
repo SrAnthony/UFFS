@@ -2,6 +2,8 @@
 *  ============================
 *  Anthony Nadaletti
 *  https://github.com/SrAnthony
+*  Bárbara Pegoraro
+*  https://github.com/barbs-pm
 *  ============================
 *
 *  Exemplo de triângulo:
@@ -28,10 +30,10 @@ int main(){
 	printf("-| Informações do primeiro ponto (x,y)\n-| ");
 	scanf("%d %d",&a.x, &a.y);
 
-	printf("-| Informações do segundo ponto\n-| ");
+	printf("-| Informações do segundo ponto (x,y)\n-| ");
     scanf("%d %d",&b.x, &b.y);
 
-	printf("-| Informações do terceiro ponto\n-| ");
+	printf("-| Informações do terceiro ponto (x,y)\n-| ");
     scanf("%d %d",&c.x, &c.y);
 	
 	int tam = area(a, b, c);
